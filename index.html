@@ -1,27 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rock Paper Scissors</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="function.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="function.js"></script>
 </head>
+
 <body>
-  <p id="main-text">Rock Paper Scissors</p>
+    <p id="main-text"> Rock Paper Scissors</p>
+    <button onclick="
+        cM();
+        let result = '';
 
-  <div class="buttons">
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-  </div>
+        if (computerMove === 'rock'){
+            result = `That's a Tie!`;
+        }
+        else if (computerMove === 'paper'){ 
+            result = `You loose!!`;
+        }
+        else if (computerMove === 'scissors'){
+            result = `You win!!!`
+        }
 
-  <p id="result"></p>
+        alert(`You picked rock, Computer picked ${computerMove} and so, ${result}`);
+    ">Rock</button>
+    <button onclick="
+        cM();
+        
+        let result = '';
 
-  <div id="scoreboard">
-    <p>Wins: <span id="wins">--</span></p>
-    <p>Losses: <span id="losses">--</span></p>
-    <p>Ties: <span id="ties">--</span></p>
-  </div>
+        if (computerMove === 'rock'){
+            result = `You win!!!`;
+        }
+        else if (computerMove === 'paper'){ 
+            result = `That's a tie!`;
+        }
+        else if (computerMove === 'scissors'){
+            result = `You loose!!`
+        }
+
+        alert(`You picked Paper, Computer picked ${computerMove} and so, ${result}`);
+    ">Paper</button>
+    <button onclick="
+        cM();
+        
+        let result = '';
+
+        if (computerMove === 'rock'){
+            result = `You loose!!`;
+        }
+        else if (computerMove === 'paper'){ 
+            result = `You win!!!`;
+        }
+        else if (computerMove === 'scissors'){
+            result = `That's a tie!`
+        }
+
+        alert(`You picked Scissors, Computer picked ${computerMove} and so, ${result}`);
+    ">Scissors</button>
 </body>
+
 </html>
